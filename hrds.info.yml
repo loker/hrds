@@ -1,0 +1,20 @@
+name: 'HRDS 2.0'
+type: theme
+description: 'HRDS 2.0 subtheme powered by Bootstrap 5, built on stable9.'
+core_version_requirement: '^9 || ^10'
+'base theme': stable9
+libraries:
+  - hrds/global-styling
+  - hrds/global-scripts
+regions:
+  header: Header
+  nav_branding: 'Navigation branding region'
+  nav_main: 'Main navigation region'
+  nav_additional: 'Additional navigation region (eg search form, social icons, etc)'
+  title_area: Title Area
+  content: 'Main content'
+  defenders: 'Defenders Area'
+  sidebar: 'Sidebar'
+  additional: 'Additional'
+  footer: Footer
+  offcanvas: Off Canvas

@@ -1,0 +1,23 @@
+{% include '@hrds/layout/header.html.twig' %}
+<main role="main">
+  <a id="main-content" tabindex="-1"></a>{# link is in html.html.twig #}
+      <section class="acilis-widget">
+        <div class="container-fluid px-0 acilis">
+          <div class="video-acilis w-100 position-relative">
+            <video playsinline="playsinline" autoplay="autoplay" muted="muted" loop="loop">
+              <source src="{{ base_path ~ directory }}/img/intro.mp4" type="video/mp4">
+            </video>
+            <div class="acilis-text">
+
+              <div>
+                <p>{{ quote }}</p>
+                <p class="description"><em>{{ quote2 }}<br/>{{ quote3 }}<br/>{{ quote4 }}</em></p>
+              </div>
+
+            </div>
+          </div>
+        </div>
+      </section>  
+      {{ page.content }}  
+</main>
+{% include '@hrds/layout/footer.html.twig' %}

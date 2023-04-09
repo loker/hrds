@@ -1,0 +1,11 @@
+  <section class="section-black py-3 takvim">
+    <a class="link-light mx-auto collapsed" data-bs-toggle="collapse" href="#CalendarCollapsed" role="button"
+            aria-expanded="false" aria-controls="CalendarCollapsed">
+      <h1 class="index-title">{{ calendar }}</h1>
+    </a>
+  </section>
+  <section id="CalendarCollapsed" class=" collapse container py-5">
+    {% block content %}
+      {{ content }}
+    {% endblock %}
+  </section>

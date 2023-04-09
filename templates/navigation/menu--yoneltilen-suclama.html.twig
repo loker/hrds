@@ -1,0 +1,21 @@
+
+{% import _self as menus %}
+{{ menus.menu_links(items, attributes, 0) }}
+{% macro menu_links(items, attributes, menu_level) %}
+  {% import _self as menus %}
+  {% if items %}
+      <ul class="nav flex-column">
+    {% for item in items %}
+      {%
+        set link_classes = [
+          item.in_active_trail ? 'active',
+          'nav-link',
+        ]
+      %}
+      <li class="nav-item menu-item menu-item-type-post_type menu-item-object-post" {{ item.attributes }}>
+        {{ link(item.title, item.url, {'class': link_classes}) }}
+      </li>
+    {% endfor %}
+  {% endif %}
+      </ul>
+{% endmacro %}

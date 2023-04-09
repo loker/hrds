@@ -1,0 +1,30 @@
+{%
+  set classes = [
+    'py-3',
+    'mb-4',
+    'view-id-' ~ id,
+    'view-display-id-' ~ display_id,
+  ]
+%}
+<div{{ attributes.addClass(classes) }}>
+  <div class="d-flex flex-column-reverse flex-md-row px-4">
+    <div class="me-md-auto mt-2">
+      {{ exposed }}
+    </div>
+    <div class="ms-md-auto mt-2">
+      {{ drupal_form('Drupal\\search\\Form\\SearchBlockForm') }}
+    </div>
+  </div>
+<div class="row row-cols-1 row-cols-md-3 g-4 my-3 container mx-auto">
+  {% if rows %}
+      {{ rows }}
+  {% elseif empty %}
+    <div class="view-empty">
+      {{ empty }}
+    </div>
+  {% endif %}
+</div>
+  {% if pager %}
+    {{ pager }}
+  {% endif %}
+</div>

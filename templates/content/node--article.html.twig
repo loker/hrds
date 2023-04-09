@@ -1,0 +1,21 @@
+{%
+  set classes = [
+    'node',
+    'node--type-' ~ node.bundle|clean_class,
+    node.isPromoted() ? 'node--promoted',
+    node.isSticky() ? 'node--sticky',
+    not node.isPublished() ? 'node--unpublished',
+    view_mode ? 'node--view-mode-' ~ view_mode|clean_class,
+  ]
+%}
+{{ attach_library('classy/node') }}
+<article{{ attributes.addClass(classes) }}>
+  <div class="img-fluid float-start me-3">
+    {{ content.field_images }}
+  </div>
+  <div>{{ language }}
+    <div class="text-start w-100 mb-3">{{ content.field_news_date }}</div>
+    {{ content.body }}
+  </div>
+
+</article>

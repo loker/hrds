@@ -1,0 +1,14 @@
+{% include '@hrds/layout/header.html.twig' %}
+{{ page.title_area }}
+<main role="main" class="container">
+  <a id="main-content" tabindex="-1"></a>{# link is in html.html.twig #}
+    <div class="row g-0">
+        <div class="col-12 col-md-9 mx-auto">
+        {{ page.content }}
+      </div>
+    </div>
+</main>
+{% if page.additional %}
+    {{ page.additional }}
+{% endif %}
+{% include '@hrds/layout/footer.html.twig' %}

@@ -1,0 +1,53 @@
+{%
+  set classes = [
+    'uclu-bolum',
+    'pt-4',
+    'bg-light',
+  ]
+%}
+<section{{ attributes.addClass(classes) }}>
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-12 col-xl-6 mx-auto text-center my-4">
+    {% block content %}
+      {{ content }}
+    {% endblock %}
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-12 col-lg-4 video-kutusu text-center p-0">
+      <div class="d-flex flex-column p-4 p-xxl-5">
+        <div class="d-flex flex-column p-4 p-xxl-5">
+                  <div class="youtube-frame">
+                    <iframe class="youtube-video" src="https://www.youtube.com/embed/3OJEWEjKWPg"
+                      title="YouTube video player" frameborder="0"
+                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                      allowfullscreen></iframe>
+                  </div>
+                  <h2 class="index-title mt-4">#HerHaftaBirYafta</h2>
+                  <a class="seeall" href="https://www.sessizkalma.org/tr/node/3158/">Devamını gör &gt;</a>
+        </div>
+      </div>
+    </div>
+    <div class="col-12 col-lg-4 podcast-kutusu text-center p-0">
+      <div class="d-flex flex-column p-4 p-xxl-5">
+        <div class="podcast-frame">
+          <a class="seeall" href="https://www.sessizkalma.org/tr/podcastler/"><img class="img-fluid" src="{{ base_path ~ directory }}/img/podcast.jpg" alt="podcast sayfasına giden link"></a>
+        </div>
+        <h2 class="index-title mt-4">Sessiz Kalma Podcast Serisi</h2>
+        <a class="seeall" href="https://www.sessizkalma.org/tr/podcastler/">Devamını gör &gt;</a>
+      </div>
+    </div>
+    <div class="col-12 col-lg-4 rapor-kutusu text-center">
+      <div class="d-flex p-4 p-xxl-5">
+        <div class="rapor-frame">
+          <img class="" src="{{ base_path ~ directory }}/img/sessiz-kalma.jpg" alt="sessiz kalma rapor kapağı">
+        </div>
+        <div class="rapor-meta d-flex flex-column justify-content-center">
+          <h2 class="index-title">Hak Savunucularına Yönelik Baskılar Raporu</h2>
+          <a class="seeall" target="_blank" href="https://www.sessizkalma.org/sites/www.sessizkalma.org/files/belgeler/2022-05/sessizkalma_haksavunucularina-yonelik-yildirma-politikalari.pdf">RAPORU İNCELE &gt;</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

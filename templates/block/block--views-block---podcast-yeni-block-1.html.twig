@@ -1,0 +1,19 @@
+{%
+  set classes = [
+    'mt-5',
+    'section-g0',
+  ]
+%}
+<section{{ attributes.addClass(classes) }}>
+  <div class="col-12 col-md-8 mx-auto pt-3">
+  {{ title_prefix }}
+  {% if label %}
+    <h2 class="text-center mt-3">{{ label }}</h2>
+  {% endif %}
+  {{ title_suffix }}
+  
+  {% block content %}
+    {{ content }}
+  {% endblock %}
+  </div>
+</section>

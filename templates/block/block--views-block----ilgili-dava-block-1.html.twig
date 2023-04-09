@@ -1,0 +1,23 @@
+{%
+  set classes = [
+    'px-2',
+    'my-4',
+  ]
+%}
+<section{{ attributes.addClass(classes) }}>  
+  <div class="durusma-container">
+    <img src="{{ base_path ~ directory }}/img/durusma.svg" alt="" width="50">
+    <div class="durusma-info">
+      {{ title_prefix }}
+      {% if label %}
+        <h2 class="side-title">{{ label }}</h2>
+      {% endif %}
+      {{ title_suffix }}
+      <div class="durusma-info small">
+        {% block content %}
+          {{ content }}
+        {% endblock %}
+      </div>
+    </div>
+  </div>
+</section>

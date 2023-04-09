@@ -1,0 +1,38 @@
+{%
+  set classes = [
+    'node',
+    'node--type-' ~ node.bundle|clean_class,
+    node.isPromoted() ? 'node--promoted',
+    node.isSticky() ? 'node--sticky',
+    not node.isPublished() ? 'node--unpublished',
+    view_mode ? 'node--view-mode-' ~ view_mode|clean_class,
+  ]
+%}
+{{ attach_library('classy/node') }}
+<article{{ attributes.addClass(classes) }}>
+  <div class="float-start me-4 mb-4">
+     <img class="img-fluid" src="{{ content.field_kapak.0 }}"/>
+  </div>
+  <div class="pe-3">
+     <div class="text-start w-100 mb-3">
+<div class="row text-sm-start text-center pb-3">
+ <div style="margin-left:-12px;">
+ {% if content.field_spotify.0['#url'] is not empty %}
+    <span class="pe-2"><a href="{{ content.field_spotify.0['#url'] }}" target="_blank" /><img class="vendoricons" src="{{ base_path ~ directory }}/img/spotify.png"/>Spotify</a></span>
+  {% endif %}
+  {% if content.field_apple.0['#url'] is not empty %}
+    <span class="pe-2"><a href="{{ content.field_apple.0['#url'] }}" target="_blank" /><img class="vendoricons" src="{{ base_path ~ directory }}/img/apple.png"/>Apple</a></span>
+  {% endif %}
+  {% if content.field_google.0['#url'] is not empty %}
+    <span class="pe-2"><a href="{{ content.field_google.0['#url'] }}" target="_blank" /><img class="vendoricons" src="{{ base_path ~ directory }}/img/google.png"/>Google</a></span>
+  {% endif %}
+  {% if content.field_youtube.0['#url'] is not empty %}
+    <span class="pe-2"><a href="{{ content.field_youtube.0['#url'] }}" target="_blank" /><img class="vendoricons" src="{{ base_path ~ directory }}/img/youtube.png"/>Youtube</a></span>
+  {% endif %}
+ </div>
+</div>
+
+</div>
+    {{ content.body }}
+  </div>
+</article>

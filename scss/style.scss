@@ -1,0 +1,1159 @@
+/* get bootstrap, customize and compile */
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,400;0,700;1,400;1,700&family=Roboto:ital,wght@0,400;0,500;0,700;1,400;1,500;1,700&display=swap');
+$sessiz-0: #f96955;
+$sessiz-1: #2D5A6E;
+$sessiz-2: #0071bc;
+$sessiz-g0: #F5F5F5;
+$sessiz-g1: #4E4E4E;
+$sessiz-g2: #F3F2F3;
+$sessiz-g3: #ABABAB;
+$menulinks: #fff;
+$primary: $sessiz-0;
+$secondary: $sessiz-g0;
+// Include bootstrap.
+@import "bs/bootstrap";
+.bg-g0 {
+    background-color: $sessiz-g0;
+}
+
+.bg-bl {
+    background-color: #000;
+}
+
+.bg-g1 {
+    background-color: $sessiz-g1;
+}
+
+.bg-0 {
+    background-color: $sessiz-0;
+}
+
+.bg-s2 {
+    background-color: $sessiz-2;
+}
+
+$secondary: $sessiz-g0;
+.form-control {
+    border-radius: 0;
+    border-color: #000;
+}
+
+.entry-title {
+    color: $sessiz-0;
+}
+
+a,
+p,
+div,
+span {
+    font-family: 'Roboto', 'sans-serif';
+}
+
+$offcanvas-horizontal-width: 300px;
+html,
+body {
+    overflow-x: hidden;
+    font-family: 'Roboto', sans-serif;
+}
+
+a {
+    text-decoration: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: "Roboto Condensed", sans-serif;
+    font-weight: 400;
+}
+
+header {
+    background-color: #F5F5F5;
+    background-image: linear-gradient(#FDFDFD, #E9E9E9);
+    box-shadow: 0px 2px 3px #999;
+    z-index: 500;
+}
+
+.mainlogo {
+    width: 165px;
+    padding: 1.4rem 1rem;
+}
+
+#veganburger {
+    padding: 1.8rem;
+}
+
+#veganburger span {
+    display: block;
+    width: 20px;
+    height: 3px;
+    margin-bottom: 4px;
+    position: relative;
+    background: #000;
+    border-radius: 3px;
+    z-index: 1;
+}
+
+h1.calendar-title {
+    margin: 2rem 0;
+}
+
+@media screen and (max-width: 640px) {
+    h1.index-title {
+        margin: 3rem 0 1rem 0
+    }
+}
+
+@media screen and (min-width: 640px) {
+    h1.index-title {
+        margin: 5rem 0 1.2rem 0
+    }
+}
+
+@media screen and (max-width: 640px) {
+    h1.page-title {
+        margin: 3rem
+    }
+}
+
+@media screen and (min-width: 640px) {
+    h1.page-title {
+        margin: 5rem
+    }
+}
+
+@media screen and (max-width: 640px) {
+    h1.route-title {
+        margin-top: 3rem
+    }
+}
+
+@media screen and (min-width: 640px) {
+    h1.route-title {
+        margin-top: 5rem
+    }
+}
+
+h1.calendar-title,
+h1.route-title,
+h1.index-title,
+h1.page-title {
+    @extend .text-center;
+    letter-spacing: -1px;
+    font-size: 1.7rem;
+    font-weight: 700;
+    line-height: 2rem;
+}
+h2.side-title {
+    @extend .text-center;
+    letter-spacing: -1px;
+    font-size: 1.2rem;
+    font-weight: 700;
+}
+
+.routing {
+    @extend .text-center;
+    margin-bottom: 4rem;
+    font-size: small;
+}
+
+
+/* off-canvas  */
+
+#offcanvasNavMenu {
+    background-color: #000;
+}
+
+#offoff {
+    font-size: 1.8rem;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+}
+
+#offcanvasNavMenu,
+#offoff,
+#offcanvasNavMenu .menu-link,
+#offcanvasNavMenu .btn:hover {
+    color: #fff;
+    text-decoration: none;
+}
+
+.off-btn:focus {
+    box-shadow: $sessiz-0 !important;
+}
+
+ul.links>li+li:before {
+    content: " | ";
+    padding: 0 10px;
+}
+
+ul.links>li {
+    display: inline;
+}
+
+ul.links>li,
+a.language-link,
+li.menu-item,
+li.menu-item a {
+    list-style: none;
+    color: white;
+    font-size: .8rem;
+    text-transform: uppercase;
+}
+
+
+/* homepage */
+
+main#homepage>section {
+    @extend .text-center;
+}
+
+.section-black {
+    @extend .container-fluid;
+    background-color: #000;
+    color: #fff;
+}
+
+.section-white {
+    @extend .container-fluid;
+    background-color: #fff;
+}
+
+.section-g0 {
+    @extend .container-fluid;
+    background-color: $sessiz-g0;
+    color: #000;
+}
+
+.section-g1 {
+    @extend .container-fluid;
+    background-color: $sessiz-g1;
+    color: #fff;
+    margin-top: -1rem;
+}
+
+.fbox {
+    @extend .d-flex;
+    @extend .h-100;
+    @extend .justify-content-center;
+    @extend .align-items-center;
+    padding: 3rem;
+}
+
+.campdesc {
+    @extend .container;
+    @extend .px-5;
+}
+
+footer {
+    background-color: #000;
+}
+
+#foot-nav {
+    @extend .container;
+    padding: 2rem 1rem 2rem 2rem;
+    color: #fff;
+}
+
+#foot-menu {
+    @extend .align-items-center;
+    @extend .nav;
+    @extend .flex-fill;
+    padding-left: .7rem;
+}
+
+#foot-menu>span {
+    margin-left: .4rem;
+}
+
+.wp-block-embed__wrapper {
+    @extend .ratio;
+    @extend .ratio-16x9;
+}
+
+.supports> :nth-child(1n) {
+    background-color: rgb(200, 228, 244);
+}
+
+.supports> :nth-child(2n) {
+    background-color: rgb(238, 181, 196);
+}
+
+.supports> :nth-child(3n) {
+    background-color: rgb(228, 219, 214);
+}
+
+.supports> :nth-child(4n) {
+    background-color: rgb(176, 184, 201);
+}
+
+.supports> :nth-child(5n) {
+    background-color: rgb(239, 218, 203);
+}
+
+.supports> :nth-child(6n) {
+    background-color: rgb(212, 221, 168);
+}
+
+.supports> :nth-child(7n) {
+    background-color: rgb(228, 219, 214);
+}
+
+.supports> :nth-child(8n) {
+    background-color: rgb(161, 219, 202);
+}
+
+.supports> :nth-child(9n) {
+    background-color: rgb(244, 213, 184);
+}
+
+.supports> :nth-child(10n) {
+    background-color: rgb(229, 212, 226);
+}
+
+.supports> :nth-child(11n) {
+    background-color: rgb(156, 194, 210);
+}
+
+.supports> :nth-child(12n) {
+    background-color: rgb(204, 202, 239);
+}
+
+// sayfalar filan
+#addon {
+    background-color: $sessiz-g2;
+    margin-bottom: -1rem;
+}
+
+.card {
+    border: none !important;
+}
+
+.card>a>img,
+.fcimg>a>img {
+    @extend .img-fluid;
+    @extend .ratio;
+    @extend .ratio-1x1;
+}
+
+.Duyuru {
+    position: relative;
+}
+
+.Duyuru::after {
+    position: absolute;
+    bottom: 5px;
+    left: 5px;
+    content: url('../img/pr.png');
+}
+
+.card-body {
+    padding: .7rem 0 .1rem 0;
+}
+
+.card-time {
+    color: $sessiz-g3;
+    font-size: .7rem;
+    font-weight: 700;
+}
+
+.card-document a,
+.card-link a {
+    color: black;
+    font-size: .9rem;
+    font-weight: 500;
+    line-height: .8rem;
+}
+
+.card-defender {
+    @extend .card-body;
+    background-color: $primary;
+    padding: 1rem;
+    display: inline;
+    margin-bottom: 1rem;
+}
+
+.card-defender a {
+    color: white;
+    text-align: justify;
+    vertical-align: middle;
+    font-size: .9rem;
+    font-weight: 500;
+    line-height: 1rem;
+}
+
+.card-document {
+    @extend .card-body;
+    text-align: center;
+}
+
+.card-document-info {
+    font-size: .8rem;
+    font-weight: 500;
+    line-height: .9rem;
+}
+
+.support-link a {
+    color: black;
+    font-weight: 400;
+    font-size: 1.1rem;
+}
+
+.support-category a {
+    color: black;
+    font-weight: 700;
+    font-size: .7rem;
+}
+
+.page-item {
+    padding: 0 .3rem;
+}
+
+.page-item>a {
+    color: black;
+    font-size: 1.1rem;
+    font-weight: 500;
+}
+
+.seeall {
+    color: #000;
+    text-transform: uppercase;
+}
+
+[id^=edit-actions],
+#search-block-form,
+#views-exposed-form--haberler-block-1 {
+    @extend .d-flex;
+    @extend .flex-row;
+}
+
+[id^=edit-submit] {
+    vertical-align: middle;
+    margin-left: 5px;
+    @extend .btn;
+    @extend .btn-outline-dark;
+    border-radius: 0;
+}
+
+.form-select,
+#edit-keys {
+    @extend .form-control;
+}
+
+.monthview {
+    background-color: #fff !important;
+}
+
+.js-pager__items {
+    @extend .d-flex;
+    @extend .justify-content-around;
+    padding: 1rem 0;
+}
+
+header>h3 {
+    @extend .text-center;
+    padding: 0.4rem 0;
+}
+
+.video-acilis {
+    height: 70vh;
+    overflow: hidden;
+}
+
+.video-acilis video {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+}
+
+.video-bg {
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+
+.acilis-text {
+    position: absolute;
+    top: 50%;
+    right: 3%;
+    z-index: 10;
+    width: 100%;
+    max-width: 640px;
+    transform: translate(0, -50%);
+    font-size: 1.75rem;
+    text-transform: inherit;
+    text-align: right;
+    line-height: 1.35;
+    color: white;
+}
+
+.acilis-text p {
+    background-color: #f26a59;
+    display: inline;
+    font-size: 1.75rem;
+    box-shadow: 1rem 0 0 #f26a59, -0.5rem 0 0 #f26a59;
+}
+
+.acilis-text p.description {
+    background-color: inherit;
+    font-size: 1rem;
+    margin-top: 1rem;
+    box-shadow: none;
+    display: block;
+    font-weight: 300;
+}
+
+#veganburger {
+    padding: 1.8rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+#veganburger span {
+    width: 40px;
+    height: 4px;
+    margin-bottom: 7px;
+}
+
+h1.calendar-title,
+h1.index-title {
+    font-size: 2.25rem;
+}
+
+.rdtext {
+    color: $sessiz-g3;
+    font-size: .9rem;
+    line-height: .7rem;
+    font-weight: 500;
+    padding-top: .5rem;
+}
+
+.vendoricons {
+    width: 28px;
+    height: auto;
+    margin-right: 6px;
+}
+
+
+/* podcasts */
+
+body {
+    color: #333333;
+}
+
+h1, h2 {
+    line-height: 1.15;
+}
+
+header {
+    box-shadow: none;
+}
+
+.seeall h1.index-title {
+    text-transform: none;
+    margin: 0 0 2rem;
+}
+
+.seeall {
+    color: #333333;
+}
+
+.section-black {
+background-color: #333333;
+color: #fff;
+}
+
+.py-big {
+    padding: 7rem 0;
+}
+
+h1.calendar-title img {
+    height: 1em;
+    transition: transform 0.3s ease;
+    margin-left: 1rem;
+}
+
+.takvim .link-light.collapsed h1 img {
+    transform: rotate(180deg);
+}
+
+#CalendarCollapsed header {
+    background-color: transparent;
+    background-image: inherit;
+    box-shadow: none;
+    z-index: 500;
+}
+
+.date-box .day{
+    font-weight: bolder;
+    color: #333333;
+}
+
+
+#block-views-block-haberler-block-2 img {
+    aspect-ratio: 4/3;
+    object-fit: cover;
+    object-position: center center;
+}
+
+.card-link {
+    line-height: 1.35;
+}
+
+.card-link a {
+    color: #333333;
+    font-weight: bolder;
+    font-size: 1rem;
+    line-height: 1.35;
+}
+
+.card-defender a {
+    font-size: 1rem;
+}
+
+.youtube-frame {
+    display: flex;
+    justify-content: center;
+}
+
+.youtube-video {
+    height: 220px;
+    width: auto;
+    aspect-ratio: 16/9;
+}
+
+h1.index-title {
+    font-size: 2.5rem;
+    letter-spacing: -0.015em;
+}
+
+h2.index-title {
+    color: #333333;
+    font-weight: bolder;
+}
+
+.podcast-frame {
+    height: 220px;
+}
+
+.podcast-frame img {
+    height: 220px;
+    width: auto;
+    box-shadow: rgb(0 0 0 / 35%) 0px 5px 15px;
+}
+
+.rapor-frame img {
+    box-shadow: rgb(0 0 0 / 35%) 0px 5px 15px;
+    height: 300px;
+}
+
+.rapor-frame {
+    padding-right: 1rem;
+}
+
+.rapor-meta {
+    text-align: left;
+}
+
+.video-kutusu {
+    background-color: #333333;
+}
+
+.podcast-kutusu {
+    background-color: #0071bc;
+}
+
+.rapor-kutusu {
+    background-color: #f96955;
+}
+
+.uclu-bolum h2.index-title, .uclu-bolum .seeall {
+    color: white;
+}
+
+.uclu-bolum h2 {
+    font-size: 1.5rem;
+}
+
+.duyulmasi-gereken {
+    height: 600px;
+    position: relative;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.kayan-bg-container {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    display: block;
+}
+
+.kayan-bg {
+    background-image: url('../img/bg-banner.jpg');
+    background-repeat: repeat-x;
+    width: 200vw;
+    display: block;
+    background-size: contain;
+    height: 100%;
+    animation-name: bg-slide;
+    animation-duration: 250s;
+    animation-iteration-count: infinite;
+    background-position: center;
+    transition-timing-function: linear;
+    opacity: 0.7;
+}
+
+.banner-meta {
+    z-index: 1000;
+    width: 700px;
+    max-width: 100%;
+    padding: 3rem;
+}
+
+@keyframes bg-slide {
+    from {background-position: 100%;}
+    to {background-position: -100%;}
+}
+
+
+.spot {
+    text-align: center;
+    max-width: 720px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.accordion-button:focus {
+    border: none;
+}
+
+.accordion-button:not(.collapsed) {
+    color: #333333;
+    background-color: transparent;
+}
+
+
+.filtreler h2.accordion-header .accordion-button {
+    font-weight: bolder;
+}
+
+.filtreler li.menu-item a {
+    color: #333333;
+    padding: 0.15rem 0;
+    opacity: 0.3;
+    text-transform: none;
+}
+
+.filtreler li.menu-item a.active {
+    opacity: 1;
+}
+
+.filtreler li.menu-item a::before {
+    content: '';
+    display: inline;
+    float: left;
+    margin-right: 0.5rem;
+    width: 1.5em;
+    height: 1.5em;
+    background-image: url('../img/circle.svg');
+    background-size: 1.15rem;
+    background-position: center center;
+    background-repeat: no-repeat;
+}
+
+.filtreler li.menu-item a.active::before {
+    background-image: url('../img/check2-circle.svg');
+    background-size: 1.33rem;
+}
+
+.accordion-button, .accordion-body {
+    padding-left: 0;
+    padding-right: 0;
+}
+
+.card-defender {
+    margin-bottom: 1.5rem;
+}
+
+.pagination .page-item {
+    opacity: 0.3;
+}
+
+.pagination .page-item.is-active {
+    opacity: 1;
+}
+
+footer {
+    background-color: #333333;
+}
+
+#footer-nav {
+    padding: 3rem 1rem 1rem 2rem
+}
+
+.yayinlar .card-img, .pdfpreview-file {
+    border-radius: 0;
+}
+
+.yayinlar .card-link a {
+    font-size: 1.15rem;
+    line-height: 1.25;
+}
+
+.yayinlar .card-link {
+    margin-bottom: 0.25rem;
+} 
+
+.yayinlar .card-body {
+    text-align: center;
+}
+
+.yayinlar .pdfpreview-file {
+    position: relative;
+    width: 100%;
+    height: 350px;
+    object-fit: cover;
+    object-position: center;
+    border: 1px solid #bac1d1;
+}
+
+.vstack {
+    display: flex;
+    flex: 1 1 auto;
+    flex-direction: column;
+    align-self: stretch;
+    aspect-ratio: 1;
+    justify-content: center;
+    max-width: 277px;
+}
+
+a.underline {
+    position: relative;
+    color: #333333;
+    z-index: 1;  
+}
+
+a.underline::before {
+    content: '';
+    background-color: #f96955;
+    position: absolute;
+    left: 0;
+    bottom: 1px;
+    width: 100%;
+    height: 3px;
+    z-index: -1;
+    transition: all .3s ease-in-out;
+}
+
+a.underline:hover::before {
+    bottom: 0;
+    height: 100%;
+}
+
+.seeall.underline::before {
+    bottom: 0;
+    height: 6px;
+}
+
+.savunucu-kunye h1.route-title {
+    text-align: left !important;
+    font-size: 2rem;
+    margin-top: 0;
+}
+
+.savunucu-kunye .kunye {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: relative;
+}
+
+.savunucu-kunye .routing {
+    position: absolute; 
+    right: 0;
+    top: 0;
+    margin-bottom: 0;
+}
+
+.savunucu-kunye-container {
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+    background-color: #f5f5f5;
+    margin-bottom: 5rem;
+}
+
+.savunucu-kunye h5 {
+    font-size: 1rem;
+}
+
+.durusma-container {
+    display: flex;
+    align-items: flex-start;
+}
+
+.durusma-container h2.side-title {
+    text-align: left !important;
+    color: #f96955;
+    margin-bottom: 0;
+}
+
+.durusma-container img {
+    margin-right: 1rem;
+}
+
+.durusma-container p {
+    margin-bottom: 0;
+}
+
+
+
+
+.raporlar-container {
+    display: flex;
+    align-items: flex-start;
+}
+
+.raporlar-container h2.side-title {
+    text-align: left !important;
+    color: #f96955;
+    margin-bottom: 0;
+}
+
+.raporlar-container img {
+    margin-right: 1rem;
+}
+
+.raporlar-container p {
+    margin-bottom: 0;
+}
+
+.rapor-info a {
+    display: block;
+}
+
+h2.side-title {
+    font-size: 1.2rem;
+    text-transform: uppercase;
+}
+
+#block-views-block-haberler-block-3 img {
+    aspect-ratio: 16/9;
+    object-fit: cover;
+    margin-bottom: 0.5rem; 
+}
+
+.normal-font {
+    font-family: "Roboto","sans-serif";;
+}
+
+.ilgili-savunucular {
+    display: flex;
+    background-color: #f5f5f5;
+    margin-bottom: 2rem;
+}
+
+.ilgili-savunucular .rdtext {
+    color: #333333;
+    font-size: 0.9rem;
+    line-height: 1;
+    font-weight: 600;
+    padding-top: 0;
+    margin-bottom: auto;
+    margin-top: auto;
+    width: 50%;
+    padding-left: 0.5rem;
+}
+
+.buyuk-video {
+    padding-top: 7rem;
+    padding-bottom: 7rem;
+    color: white;
+    background-color: #333333;
+}
+
+.ortali-embed {
+    text-align: center;
+}
+
+.ortali-embed iframe {
+    width: 720px;
+    max-width: 100%;
+    aspect-ratio: 16/9;
+
+}
+
+.sol-video {
+    padding: 4rem;
+    background-color: #bac1d1;
+}
+
+.sag-video {
+    padding: 4rem;
+    color: white;
+    background-color: #7b7f8a;
+}
+
+.videolar h4 {
+    font-weight: 600;
+}
+
+.embed-responsive iframe {
+    aspect-ratio: 16/9;
+    width: 100%;
+    height: auto;
+}
+
+.offcanvas-body {
+    position: relative;
+}
+
+.arama {
+    position: absolute;
+    bottom: 1rem;
+    width: calc(100% - 4rem);
+    left: 2rem;
+}
+
+.arama .input-group-text {
+    background-color: transparent;
+    border: none;
+}
+
+.arama input {
+    background-color: transparent;
+    color: white;
+    font-size: 1rem;
+    font-family: 'Roboto';        
+    border-bottom: 1px solid white;
+}
+
+.arama-icon {
+    content: '';
+    display: block; 
+    height: 1.5em;
+    width: 1.5em;
+    background-image: url('../img/search.svg');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: bottom;
+    transform: translateY(11px);
+    margin-right: 1em;
+}
+
+#foot-nav {
+    padding: 2rem 2rem 1rem
+}
+
+@media only screen and (max-width: 767px) {
+    .kayan-bg {
+            background-size: cover;
+            animation-duration: 100s;
+    }
+
+    footer .navbar-nav {
+            flex-wrap: wrap;
+    } 
+
+    .filtreler .accordion {
+            margin-bottom: 2rem;
+    }
+
+    .vstack {
+            max-width: inherit;
+    }
+
+    .savunucu-kunye {
+            padding-left: 0;
+    }
+
+    .savunucu-kunye .kunye {
+            margin-top: 2rem;
+    }
+
+    .savunucu-kunye .portre {
+            text-align: center;
+    }
+
+    .savunucu-kunye h1.route-title {
+            text-align: center !important;
+    }
+
+    .savunucu-kunye .routing {
+            position: inherit;
+            margin-bottom: 0.5rem;
+    }
+
+    .savunucu-kunye-container {
+            margin-bottom: 3rem;
+    }
+
+    .sol-video {
+            padding: 3rem 1rem;
+        }
+
+    .sag-video {
+            padding: 3rem 1rem;
+    }
+
+    .buyuk-video {
+            padding-top: 3rem;
+            padding-bottom: 3rem;
+    }
+
+    .ortali-embed iframe {
+            max-width: calc(100% - 2rem);
+        }
+
+        .yayinlar .pdfpreview-file {
+            height: auto;
+        }
+}
+
+@media only screen and (min-width: 1400px) {
+    .yayinlar .pdfpreview-file {
+            height: 400px;
+    }
+
+    .sol-video {
+            padding: 7rem;
+        }
+
+    .sag-video {
+            padding: 7rem;
+    }
+
+    .vstack {
+            max-width: 322px;
+    }
+    .youtube-video {
+            height: 250px;
+    }
+
+    .podcast-frame {
+            height: 250px;
+    }
+    
+    .podcast-frame img {
+            height: 250px;
+            width: auto;
+            box-shadow: rgb(0 0 0 / 35%) 0px 5px 15px;
+    }
+
+    .rapor-frame img {
+            box-shadow: rgb(0 0 0 / 35%) 0px 5px 15px;
+            height: 320px;
+    }
+}
+
+
+
+

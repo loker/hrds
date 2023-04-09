@@ -1,0 +1,33 @@
+<header>
+ <nav class="d-flex sticky-top" aria-label="Main navigation">
+  <div id="topmenu" class="container-fluid flex-fill">
+    <a href="{{ url('<front>') }}"><img alt="logo" class="mainlogo" src="{{ base_path ~ directory }}/img/logo_{{language.getId() }}.png"/></a>
+  </div>
+  <div id="veganburger" type="button"
+    data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavMenu"
+    aria-controls="offcanvasNavMenu">
+      <span></span>
+      <span></span>
+      <span></span>
+  </div>
+
+  <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavMenu" aria-labelledby="offcanvasNavMenuLabel">
+    <div class="offcanvas-header">
+      <span class="flex-fill"></span>
+      <span id="offoff" class="btn" data-bs-dismiss="offcanvas" aria-label="Close">X</span>
+    </div>
+    <div class="offcanvas-body">
+      {% if page.offcanvas %}
+          {{ page.offcanvas }}
+      {% endif %}
+      <div class="input-group mb-3 arama">
+        <div class="arama-icon"></div>
+         <form class="search-form" action="/search/node">
+          <input name="keys" type="text"  autocomplete="off" placeholder="{{ "ARAMA"|t }}" class="form-control">
+          <button class="display-flex align-items-center justify-content-center bg-transparent position-relative border-0"></button>
+        </form>
+        </div>
+    </div>
+  </div>
+  </nav>
+</header>

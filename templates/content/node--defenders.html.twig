@@ -1,0 +1,44 @@
+        <div class="container-fluid savunucu-kunye-container">
+          <div class="container savunucu-kunye mx-auto">
+            <div class="row">
+              <div class="col-12 col-md-3 portre">
+                <div class="img-fluid float-start me-3">
+                  {{ content.field_image }}
+                </div>
+              </div>
+              <div class="col-12 col-md-9 kunye">
+                <div class="routing"><a href="{{ url('<front>') }}/node/3152/" class="text-dark">&lt; {{ alldef }}</a></div>
+                <h1 class="route-title">
+                  {{ node.label }}
+                </h1>
+                <hr>
+                <div>
+                  {{ content.field_hak_calisma_alani }}
+                  {{ content.field_yoneltilen_suclama }}
+                  {{ content.field_baski_bicimi }}
+                  <h5><strong>{{ updated }}</strong> <span class="normal-font">{{ node.getChangedTime|format_date('short') }}</span></h5>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+        <main role="main" class="container">
+          <a id="main-content" tabindex="-1"></a>{# link is in html.html.twig #}
+          <div class="row">
+            <div class="col-12 col-md-6 offset-md-1">
+              <article>
+
+                <div class="pe-3">
+                  {{ content.body }}
+                </div>
+
+              </article>
+
+            </div>
+
+            <div class="col-12 col-md-3 offset-md-1">
+{{ drupal_region('sidebar') }}
+            </div>
+
+        </main>

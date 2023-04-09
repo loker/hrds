@@ -1,0 +1,8 @@
+{% include '@hrds/layout/header.html.twig' %}
+    {{ page.content }}
+
+    {% if page.additional %}
+        {{ page.additional }}
+    {% endif %}
+
+{% include '@hrds/layout/footer.html.twig' %}

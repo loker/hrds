@@ -1,0 +1,10 @@
+{% include '@hrds/layout/header.html.twig' %}
+<div class="mb-5">
+{{ page.title_area }}
+</div>
+<main role="main" class="g-0 container-fluid">
+  <a id="main-content" tabindex="-1"></a>{# link is in html.html.twig #}
+    {{ page.content }}    
+</main>
+
+{% include '@hrds/layout/footer.html.twig' %}

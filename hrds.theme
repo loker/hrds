@@ -1,0 +1,40 @@
+<?php
+
+/**
+ * @file
+ * HRDS 2.0 theme file.
+ */
+
+function hrds_preprocess(&$variables) {
+  $variables['base_path'] = base_path();
+  $language = \Drupal::languageManager()->getCurrentLanguage()->getId();
+  $variables['updated'] = ($language == 'tr' ? 'SON GÜNCELLEME:' : 'UPDATED:' );
+  $variables['stories'] = ($language == 'tr' ? 'Duyulması Gereken Hikâyeler' : 'Stories that Need to be Heard' );
+  $variables['seeall'] = ($language == 'tr' ? 'Devamını gör >' : 'See all content >' );
+  $variables['calendar'] = ($language == 'tr' ? 'Dava Takvimi' : 'Case Calendar' );
+  $variables['listen'] = ($language == 'tr' ? 'DİNLE:' : 'LISTEN:' );
+  $variables['alanlar'] = ($language == 'tr' ? 'HAK ALANI' : 'FIELD OF WORK' );
+  $variables['baskilar'] = ($language == 'tr' ? 'BASKI BİÇİMİ' : 'FORM OF OPPRESSION' );
+  $variables['suclamalar'] = ($language == 'tr' ? 'YÖNELTİLEN SUÇLAMA' : 'ACCUSED OF' );
+  $variables['allpod'] = ($language == 'tr' ? 'tüm bölümler' : 'all episodes' );
+  $variables['quote'] = ($language == 'tr' ? 'En ciddi insan hakları ihlallerinin doğrudan insan hakları savunucularını hedef aldığı gerçeği, bu kişilerin rollerini desteklemek ve onları olumsuzluklardan korumak için daha yapılacak çok iş olduğunu gösteriyor.' : 'The fact that the most serious human rights violations continue to be
+inflicted upon human rights defenders shows that much more needs to
+be done to support their role and protect them from harm.' );
+  $variables['quote2'] = ($language == 'tr' ? '- İnsan Hakları Savunucuları:' : 'Human Rights Defenders:' );
+  $variables['quote3'] = ($language == 'tr' ? 'İnsan Haklarını Savunma' : 'Protecting the Right to' );
+  $variables['quote4'] = ($language == 'tr' ? 'Hakkının Korunması (BM)' : 'Defend Human Rights (UN)' );
+  $variables['castyeni'] = ($language == 'tr' ? 'Bu podcast serisi ile hak savunucularının yaşam hikâyelerini dinliyor, insan hakları gündemi ve geleceğini tartışıyoruz. Sekiz bölümlük seri ile dinleyiciler, eylemlerde en önde gördükleri, mücadelelerine tanıklık ettikleri, haklarında tutuklama ve yargılama haberleri okudukları hak savunucularının bireysel hikayelerini öğrenecek. Bölümler iki haftada bir Çarşamba günleri yayınlanacak.' : '' );
+  $variables['casteski'] = ($language == 'tr' ? 'Bu podcast serisi, Eşit Haklar İçin İzleme Derneği ve Hafıza Merkezi tarafından Hollanda Helsinki Komitesi desteğiyle hazırlandı ve Kısa Dalga Medya işbirliğiyle hayata geçirildi. Gazeteci Beril Eski’nin sunduğu seride üç temel insan hakkını ve bu hakların kullanımına ilişkin kısıtlamaları ele alıyoruz.' : 'This podcast series is produced by the Association for Monitoring Equal Rights and Truth Justice Memory Center with the support of the Netherlands Helsinki Committee, and in collaboration with Kisa Dalga Medya. Hosted by journalist Beril Eski, the series covers three fundamental human rights and explores the exercise of these rights in Turkey.' );
+  $variables['alldef'] = ($language == 'tr' ? 'tüm savunucular' : 'all defenders' );
+}
+
+use Drupal\taxonomy\Entity\Term;
+function hrds_theme_suggestions_page_alter(array &$suggestions, array $variables) {
+  if ($node = \Drupal::routeMatch()->getParameter('node')) {
+	$suggestions[] = 'page__' . $node->bundle();
+  }
+  if (\Drupal::routeMatch()->getRouteName() == 'entity.taxonomy_term.canonical' && $tid = \Drupal::routeMatch()->getRawParameter('taxonomy_term')) {
+    $term = Term::load($tid);
+    $suggestions[] = 'page__taxonomy__' . $term->bundle();
+  }
+}

@@ -1,0 +1,23 @@
+{%
+  set classes = [
+    'py-3',
+    'mb-4',
+    'view-id-' ~ id,
+    'view-display-id-' ~ display_id,
+    'yayinlar'
+  ]
+%}
+<div{{ attributes.addClass(classes) }}>
+<div class="row row-cols-1 row-cols-md-4 g-4 my-3 container mx-auto">
+  {% if rows %}
+      {{ rows }}
+  {% elseif empty %}
+    <div class="view-empty">
+      {{ empty }}
+    </div>
+  {% endif %}
+</div>
+  {% if pager %}
+    {{ pager }}
+  {% endif %}
+</div>
