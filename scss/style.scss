@@ -12,7 +12,7 @@ $menulinks: #fff;
 $primary: $sessiz-0;
 $secondary: $sessiz-g0;
 // Include bootstrap.
-@import "bs/bootstrap";
+@import "scss/bootstrap";
 .bg-g0 {
     background-color: $sessiz-g0;
 }
@@ -142,21 +142,21 @@ h1.calendar-title,
 h1.route-title,
 h1.index-title,
 h1.page-title {
-    @extend .text-center;
+    text-align: center !important;
     letter-spacing: -1px;
     font-size: 1.7rem;
     font-weight: 700;
     line-height: 2rem;
 }
 h2.side-title {
-    @extend .text-center;
+    text-align: center !important;
     letter-spacing: -1px;
     font-size: 1.2rem;
     font-weight: 700;
 }
 
 .routing {
-    @extend .text-center;
+    text-align: center !important;
     margin-bottom: 4rem;
     font-size: small;
 }
@@ -209,7 +209,7 @@ li.menu-item a {
 /* homepage */
 
 main#homepage>section {
-    @extend .text-center;
+    text-align: center !important;
 }
 
 .section-black {
@@ -455,7 +455,7 @@ footer {
 }
 
 header>h3 {
-    @extend .text-center;
+    text-align: center !important;
     padding: 0.4rem 0;
 }
 
