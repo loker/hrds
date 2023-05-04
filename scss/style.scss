@@ -594,7 +594,7 @@ h1.calendar-title img {
     color: #333333;
 }
 
-
+#block-views-block-arama-block-2 img,
 #block-views-block-haberler-block-2 img {
     aspect-ratio: 4/3;
     object-fit: cover;
@@ -644,11 +644,11 @@ h2.index-title {
 .podcast-frame img {
     height: 220px;
     width: auto;
-    box-shadow: rgb(0 0 0 / 35%) 0px 5px 15px;
+    box-shadow: rgba(0, 0, 0, .35) 0px 5px 15px;
 }
 
 .rapor-frame img {
-    box-shadow: rgb(0 0 0 / 35%) 0px 5px 15px;
+    box-shadow: rgba(0, 0, 0, .35) 0px 5px 15px;
     height: 300px;
 }
 
@@ -1145,12 +1145,12 @@ h2.side-title {
     .podcast-frame img {
             height: 250px;
             width: auto;
-            box-shadow: rgb(0 0 0 / 35%) 0px 5px 15px;
-    }
+            box-shadow: rgba(0, 0, 0, .35) 0px 5px 15px;
+        }
 
     .rapor-frame img {
-            box-shadow: rgb(0 0 0 / 35%) 0px 5px 15px;
-            height: 320px;
+        box-shadow: rgba(0, 0, 0, .35) 0px 5px 15px;
+        height: 320px;
     }
 }
 
