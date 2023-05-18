@@ -1,0 +1,17 @@
+
+  <div class="raporlar-container my-4">
+    <img src="{{ base_path ~ directory }}/img/raporlar.svg" aria-hidden="true" width="50">
+    <div class="rapor-info">
+      {{ title_prefix }}
+      {% if label %}
+        <h2 class="side-title">{{ label }}</h2>
+      {% endif %}
+      {{ title_suffix }}
+      <div class="rapor-info small">
+        {% block content %}
+          {{ content }}
+        {% endblock %}
+      </div>
+    </div>
+  </div>
+</section>
