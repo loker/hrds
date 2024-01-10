@@ -753,7 +753,7 @@ h2.index-title {
     text-transform: none;
 }
 
-.filtreler li.menu-item a.active {
+.filtreler li.menu-item a.is-active {
     opacity: 1;
 }
 
@@ -770,9 +770,11 @@ h2.index-title {
     background-repeat: no-repeat;
 }
 
+.filtreler li.menu-item a.is-active::before,
 .filtreler li.menu-item a.active::before {
     background-image: url('../img/check2-circle.svg');
     background-size: 1.33rem;
+    opacity: 1;
 }
 
 .accordion-button, .accordion-body {
@@ -1154,6 +1156,21 @@ h2.side-title {
     }
 }
 
-
+/* arama */
+.views-exposed-form {
+    @extend .d-flex;
+    @extend .align-content-between;
+}
+.item-list ,
+#views-exposed-form-arama-page-1 {
+    margin-bottom: 1rem;
+}
+#views-exposed-form-arama-page-1 > input {
+    @extend .form-control;
+}
+.form-submit {
+    @extend .btn; 
+    @extend .btn-primary;
+}
 
 
