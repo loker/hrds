@@ -12,7 +12,10 @@
       {{ exposed }}
     </div>
     <div class="ms-md-auto mt-2">
-      {{ drupal_form('Drupal\\search\\Form\\SearchBlockForm') }}
+         <form class="search-form" action="/arama">
+          <input name="keys" type="text"  autocomplete="off" placeholder="{{ "ARAMA"|t }}" class="form-control">
+          <button class="display-flex align-items-center justify-content-center bg-transparent position-relative border-0"></button>
+        </form>
     </div>
   </div>
 <div class="row row-cols-1 row-cols-md-3 g-4 my-3 container mx-auto">
